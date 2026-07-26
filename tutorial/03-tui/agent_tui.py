@@ -68,7 +68,6 @@ class AgentTuiApp(App):
 
     BINDINGS = [
         Binding("ctrl+q", "quit", "Quit", show=True),
-        Binding("ctrl+c", "clear_conversation", "Clear", show=True),
         Binding("ctrl+d", "toggle_debug", "Debug", show=True),
         Binding("escape", "focus_input", "Input", show=True),
     ]

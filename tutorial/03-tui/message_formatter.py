@@ -148,6 +148,8 @@ def format_system_message(subtype: str, data: dict | None = None) -> Text:
     if data:
         if "session_id" in data:
             result.append(f" session={data['session_id']}", style=STYLE_SYSTEM)
+        if "info" in data:
+            result.append(f"\n{data['info']}\n", style="dim")
     result.append("\n", style=STYLE_SYSTEM)
     return result
 
