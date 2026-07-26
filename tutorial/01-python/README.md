@@ -46,6 +46,13 @@ Each file builds on the previous one. Start with `01-hello-agent.py` and work yo
 
 The files with explanations are in `../00-how-llms-enable-agents/` — read those first if you want to understand the "why" before the "how".
 
+### Deep Dives
+
+| Document | Description |
+|----------|-------------|
+| [RESPONSE_ANATOMY.md](RESPONSE_ANATOMY.md) | Field-by-field dissection of every message in a real run |
+| [MESSAGE_FLOWS.md](MESSAGE_FLOWS.md) | All message types, flow diagrams, and state transitions |
+
 ## Files
 
 | # | File | Concept |

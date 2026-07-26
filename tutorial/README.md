@@ -15,6 +15,13 @@ Before writing any code, understand the fundamentals:
 3. [The Agentic Loop](00-how-llms-enable-agents/03-the-agentic-loop-explained.md) — `stop_reason`, `tool_use`, `end_turn`
 4. [The Message Protocol](00-how-llms-enable-agents/04-message-protocol.md) — content blocks, message types, data flow
 
+### Reference: Message Flows
+
+| Document | Description |
+|----------|-------------|
+| [RESPONSE_ANATOMY.md](01-python/RESPONSE_ANATOMY.md) | Field-by-field dissection of every message in a real run |
+| [MESSAGE_FLOWS.md](01-python/MESSAGE_FLOWS.md) | All message types, flow diagrams, and state transitions |
+
 ### Part 1: Python Track
 
 | # | File | What You Learn |

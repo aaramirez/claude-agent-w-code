@@ -38,6 +38,12 @@ Each file builds on the previous one. Start with `01-hello-agent.ts` and work yo
 
 The conceptual foundation is in `../00-how-llms-enable-agents/` — read those first if you want to understand the "why" before the "how".
 
+### Deep Dives
+
+| Document | Description |
+|----------|-------------|
+| [MESSAGE_FLOWS.md](MESSAGE_FLOWS.md) | All message types, flow diagrams, and state transitions |
+
 ## Files
 
 | # | File | Concept |
