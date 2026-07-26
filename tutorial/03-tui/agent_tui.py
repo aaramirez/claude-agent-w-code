@@ -81,6 +81,7 @@ class AgentTuiApp(App):
         permission_mode: str | None = None,
         max_turns: int | None = None,
         max_budget_usd: float | None = None,
+        instructions: str | None = None,
         **kwargs: Any,
     ):
         super().__init__(**kwargs)
@@ -88,6 +89,7 @@ class AgentTuiApp(App):
         self.permission_mode = permission_mode
         self.max_turns = max_turns
         self.max_budget_usd = max_budget_usd
+        self.instructions = instructions
 
         # State
         self.debug_panel = DebugPanel(enabled=True)
@@ -117,6 +119,10 @@ class AgentTuiApp(App):
                 "  Ctrl+Shift+C (or Shift+click) to copy from terminal"
             ),
         }))
+        if self.instructions:
+            self._write_to_console(format_system_message("suggestions", {
+                "info": self.instructions,
+            }))
 
     def _make_status(self) -> str:
         debug_state = self.debug_panel.get_status_text()

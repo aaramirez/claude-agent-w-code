@@ -71,14 +71,16 @@ class CustomToolsTuiApp(AgentTuiApp):
 def main():
     """
     Launch the TUI with custom tools.
-
-    Try asking:
-      - "What's 15 * 7 + 3?"
-      - "What's the weather in NYC?"
-      - "How many users are in the database?"
-      - "Get the weather in London, then calculate the temperature in Celsius"
     """
-    app = CustomToolsTuiApp()
+    app = CustomToolsTuiApp(
+        instructions=(
+            "Try asking:\n"
+            '  - "What\'s 15 * 7 + 3?"\n'
+            '  - "What\'s the weather in NYC?"\n'
+            '  - "How many users are in the database?"\n'
+            '  - "Get the weather in London, then calculate the temperature in Celsius"'
+        ),
+    )
     app.run()
 
 

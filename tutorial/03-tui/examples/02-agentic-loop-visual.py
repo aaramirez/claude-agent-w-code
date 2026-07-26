@@ -31,15 +31,16 @@ from agent_tui import AgentTuiApp
 def main():
     """
     Launch the TUI with tools that force multi-step reasoning.
-
-    Try asking:
-      - "Read all Python files and summarize what each does"
-      - "Find the main entry point of this project"
-      - "List all functions defined in agent_tui.py"
     """
     app = AgentTuiApp(
         allowed_tools=["Read", "Glob", "Grep"],
         permission_mode="acceptEdits",
+        instructions=(
+            "Try asking:\n"
+            '  - "Read all Python files and summarize what each does"\n'
+            '  - "Find the main entry point of this project"\n'
+            '  - "List all functions defined in agent_tui.py"'
+        ),
     )
     app.run()
 

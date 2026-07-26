@@ -23,9 +23,18 @@ from agent_tui import AgentTuiApp
 
 
 def main():
+    """
+    Launch a basic agent with file-reading tools.
+    """
     app = AgentTuiApp(
         allowed_tools=["Read", "Glob", "Grep"],
         permission_mode="acceptEdits",
+        instructions=(
+            "Try asking:\n"
+            '  - "What files are in this directory?"\n'
+            '  - "Read the README.md file"\n'
+            '  - "Find all Python files in the project"'
+        ),
     )
     app.run()
 

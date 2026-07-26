@@ -336,11 +336,14 @@ def main():
     Launch the no-memory demonstration TUI.
 
     Press Enter (or type anything) to start the demo.
-    The demo will run automatically, showing:
-      Part 1: Claude fails to remember (no session)
-      Part 2: Claude remembers (with session resume)
     """
-    app = NoMemoryTuiApp()
+    app = NoMemoryTuiApp(
+        instructions=(
+            "This example runs a two-part demo automatically.\n"
+            "  Press Enter (or type anything) to start.\n"
+            "  After the demo, you can chat freely."
+        ),
+    )
     app.run()
 
 
